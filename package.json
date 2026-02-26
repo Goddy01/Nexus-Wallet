@@ -1,0 +1,39 @@
+{
+  "name": "nexus-wallet",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+  "setup": "./scripts/setup.sh",
+  "setup:win": "scripts\\setup.bat",
+  "dev": "tsx watch src/cli/dashboard.ts",
+  "build": "tsc",
+  "start": "pm2 start ecosystem.config.js",
+  "stop": "pm2 stop all",
+  "agent:create": "tsx src/cli/commands.ts create-agent",
+  "agent:start": "tsx src/cli/commands.ts start-agent",
+  "agent:list": "pm2 list",
+  "scale": "./scripts/scale-test.sh",
+  "test": "vitest",
+  "dashboard": "tsx src/cli/dashboard.ts"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@solana/web3.js": "^1.98.4",
+    "@turnkey/sdk-server": "^5.1.0",
+    "@turnkey/solana": "^1.1.25",
+    "@types/node": "^25.3.1",
+    "better-sqlite3": "^12.6.2",
+    "blessed": "^0.1.81",
+    "commander": "^14.0.3",
+    "dotenv": "^17.3.1",
+    "pm2": "^6.0.14",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4",
+    "winston": "^3.19.0",
+    "zod": "^4.3.6"
+  }
+}
