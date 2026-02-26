@@ -104,6 +104,22 @@ export function initDatabase() {
     )
   `);
 
+  // Tasks table
+db.exec(`
+    CREATE TABLE IF NOT EXISTS tasks (
+      id TEXT PRIMARY KEY,
+      employer_id TEXT NOT NULL,
+      type TEXT NOT NULL,
+      description TEXT NOT NULL,
+      budget REAL NOT NULL,
+      requirements TEXT,
+      status TEXT DEFAULT 'open',
+      assigned_to TEXT,
+      created_at INTEGER NOT NULL,
+      completed_at INTEGER
+    )
+  `);
+
   console.log('✅ Database initialized');
 }
 
