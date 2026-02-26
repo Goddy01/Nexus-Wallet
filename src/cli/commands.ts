@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { Command } from 'commander';
 import { NexusWallet } from '../core/wallet';
 import { initDatabase } from '../db/sqlite';
