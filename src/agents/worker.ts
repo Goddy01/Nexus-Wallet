@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { NexusWallet } from '../core/wallet';
 import { TradingAgent } from './trading-agent';
 import { db, initDatabase } from '../db/sqlite';
